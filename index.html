@@ -6,92 +6,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="restCSS.css">
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/fb28803269.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
 </head>
 <body>
-    <div class="main">
         <div class="header">
-            <div class="top-header"></div>
-            <div class="bottom-header"></div>
+            <div class="top-header">
+                <div class="top-left">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchBox" placeholder="search">
+                    
+                </div>
+                <div class="top-right">
+                    <a href=""><i class="fa-solid fa-bell"></i></a>
+                    <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/3940/3940403.png" alt="avatar photo">
+                    <h3>Sorin</h3> 
+                </div>
+            </div>
+            <div class="bottom-header">
+                <div class="greet">
+                    <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/3940/3940403.png" alt="avatar photo">
+                    <p>Hi Sorin!</p>
+                    <h1>@SeoBlack</h1>
+                </div>
+                <div class="btns">
+                    <button class="btn" id="newBtn">New</button>
+                    <button class="btn" id="uploadBtn">Upload</button>
+                    <button class="btn" id="shareBtn">Share</button>
+                </div>
+            </div>
         </div>
         <div class="dashboard">
-            <div class="nav"></div>
-            <div class="setting"></div>
+            
+            <h1 class="dashboard-header"><i class="fa-solid fa-table-list"></i>Dashboard</h1>
+            <div class="nav">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-solid fa-user"></i>Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-solid fa-message"></i>Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-solid fa-list-check"></i>Tasks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-solid fa-user-group"></i>Communities</a>
+                    </li>
+                </ul>
+                <div class="settings">
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"><i class="fa-solid fa-circle-question"></i>Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"><i class="fa-solid fa-lock"></i>Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
         <div class="content">
             
             <div class="projects">
                 <div class="projects-heading">
-                    projects
+                    Projects
                 </div>
                 <div class="project-cards">
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                    <div class="project-card">
+                        <div class="card-title">
+                            <h3>Dashboard</h3>
+                            <p>Admin dashboard created using html and css</p>                        
+                        </div>
+
+                        <div class="actions">
+                            <a href="" class="rate"><i class="fa-brands fa-github"></i></a>
+                            <a href="" class="share"><i class="fa-solid fa-eye"></i></a>
+                            <a href="" class="view"><i class="fa-solid fa-share-nodes"></i></a>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                    <div class="project-card">
+                        <div class="card-title">
+                            <h3>SignUp</h3>
+                            <p>SignUp Form created with html, css and javascript.</p>                        
+                        </div>
+
+                        <div class="actions">
+                            <a href="https://github.com/SeoBlack/SignUp" class="rate"><i class="fa-brands fa-github"></i></a>
+                            <a href="" class="share"><i class="fa-solid fa-eye"></i></a>
+                            <a href="https://seoblack.github.io/SignUp/" class="view"><i class="fa-solid fa-share-nodes"></i></a>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                    <div class="project-card">
+                        <div class="card-title">
+                            <h3>Calculator</h3>
+                            <p>Web  based calculator project</p>                        
+                        </div>
+
+                        <div class="actions">
+                            <a href="https://github.com/SeoBlack/Calculator" class="rate"><i class="fa-brands fa-github"></i></a>
+                            <a href="" class="share"><i class="fa-solid fa-eye"></i></a>
+                            <a href="https://seoblack.github.io/Calculator/" class="view"><i class="fa-solid fa-share-nodes"></i></a>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                    <div class="project-card">
+                        <div class="card-title">
+                            <h3>Etch-a-sketch</h3>
+                            <p>Etch a sketch project created using html,css and javascript</p>                        
+                        </div>
+
+                        <div class="actions">
+                            <a href="https://github.com/SeoBlack/etch-a-sketch" class="rate"><i class="fa-brands fa-github"></i></a>
+                            <a href="" class="share"><i class="fa-solid fa-eye"></i></a>
+                            <a href="https://seoblack.github.io/etch-a-sketch/" class="view"><i class="fa-solid fa-share-nodes"></i></a>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                    <div class="project-card">
+                        <div class="card-title">
+                            <h3>Blog</h3>
+                            <p>A blog project created using html,css and javascript for the front end and Python FLASK for the backend.</p>                        
+                        </div>
+
+                        <div class="actions">
+                            <a href="https://github.com/SeoBlack/Blog" class="rate"><i class="fa-brands fa-github"></i></a>
+                            <a href="" class="share"><i class="fa-solid fa-eye"></i></a>
+                            <a href="http://sorin-blog.herokuapp.com/" class="view"><i class="fa-solid fa-share-nodes"></i></a>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                    <div class="project-card">
+                        <div class="card-title">
+                            <h3>Pomodoro</h3>
+                            <p>Time management tool created with Python TKinter</p>                        
+                        </div>
+
+                        <div class="actions">
+                            <a href="https://github.com/SeoBlack/pomodoro" class="rate"><i class="fa-brands fa-github"></i></a>
+                            <a href="" class="share"><i class="fa-solid fa-eye"></i></a>
+                            <a href="" class="view"><i class="fa-solid fa-share-nodes"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="announcements">
                 <div class="announcements-heading">
-                    announcements
+                    Announcements
                 </div>
                 <div class="announcement-cards">
                     <div class="announcement-item">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                        <h3>Site Maintenance</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                     </div>
                     <div class="announcement-item">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                        <h3>Community Share Day</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                     <div class="announcement-item">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                        <h3>Update Privacy Policy</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                     </div>
                 </div>
             </div>
             <div class="trending">
-                <div class="trending-header">
-                    trending
+                <div class="trending-heading">
+                    Trending
                 </div>
                 <div class="trending-cards">
                     <div class="trending-item">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                        <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png" alt="jayson's profile picture">
+                        <div class="trend-info">
+                            <h3>@jayson</h3>
+                            <p>World Peace Bulider</p>
+                        </div>
                     </div>
                     <div class="trending-item">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                        <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/1880/1880988.png" alt="kairo's profile picture">
+                        <div class="trend-info">
+                            <h3>@kairo.X</h3>
+                            <p>E-sport player</p>
+                        </div>
                     </div>
                     <div class="trending-item">
-                        <h3>Title</h3>
-                        <p>lorem  ipsum lsokf jildlo puoejdk uurwjfew</p>
+                        <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/8264/8264244.png" alt="yanns's profile picture">
+                        <div class="trend-info">
+                            <h3>@yann</h3>
+                            <p>Russian baker</p>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/5654/5654581.png" alt="yanns's profile picture">
+                        <div class="trend-info">
+                            <h3>@jassica</h3>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/6802/6802091.png" alt="yanns's profile picture">
+                        <div class="trend-info">
+                            <h3>@pop</h3>
+                            <p>an IT person</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     
 </body>
 </html>

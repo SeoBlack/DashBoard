@@ -1,76 +1,292 @@
-/* setting layout */
-
-.main{
+:root{
+    --primary-dark:#222831;
+    --secondery-dark:#393E46;
+    --cyan:#00ADB5;
+    --white:#EEEEEE;
+    --paragraph-color:rgb(190, 190, 190);
+}
+body{
     display: grid;
     grid-template: 1fr 4fr / 1fr  4fr ;
-    width: 100vw;
-    height: 100vh;
+    background-color: var(--primary-dark);
+    color: var(--white);
+    font-family: 'Cabin Sketch', cursive;
 }
+
+
+
+
+/* HEADER */
 .header{
-    background-color: aqua;
+    display: grid;
+    grid-template-rows:repeat(2,1fr);
     grid-area: 1 / 2 / 2 / 3;
+    height: max(140px,15vh);
+    padding: 0px 4%;
+    background-color: var(--secondery-dark);
 }
-.dashboard{
-    background-color: bisque;
+.top-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}.top-left{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-self: start;
+}
+.top-right{
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.bottom-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.greet{
+    display: grid;
+    grid-template:auto auto / auto auto;
+    justify-self: start;
+    align-items: center;
+
+}
+.greet h1{
+    font-size: larger;
+}
+.greet p{
+    font-size: 14px;
+    align-self: end;
+}
+.btns{
+    display: flex;
+    justify-self: end;
+    align-self: center;
+    gap: 10px;
+}
+.btn{
+    width: max(100px,8vw);
+    height: 35px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--cyan);
+    color: var(--white);
+}
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#searchBox{
+    width: 37vw;
+    height: 25px;
+    border: none;
+    background-color: var(--primary-dark);
+    border-radius: 20px;
+    align-self: center;
+    color: var(--white);
+}
+.fa-bell{
+    font-size: 30px;
+    justify-self: center;
+    margin-left: 20px;
+}
+.fa-bell:hover{
+    transform: rotate(360deg) scale(1.3);
+    /* transform: rotate(-70deg); */
+}
+.fa-magnifying-glass{
+    align-self: center;
+}
+.top-right .avatar{
+    width: 35px;
+    margin:0px 15px;
+
+}
+.greet .avatar{
+    width: 50px;
     grid-area: 1 / 1 / 3 / 2;
+    align-self: center;
+    margin-right: 10px;
+
+}
+.avatar{
+    transition: 0.4s ease-in-out;
+}
+.avatar:hover{
+    transform: rotate(360deg) scale(1.2);
+}
+/* DASHBOARD */
+.dashboard{
+    width: max(300px,20vw);
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--cyan);
+    color: var(--white);
+    grid-area: 1 / 1 / 3 / 2;
+    /* background-image: linear-gradient(to right,var(--cyan),var(--secondery-dark)); */
+
+}
+.dashboard-header{
+    align-self: flex-start;
+    font-size: 2rem;
+    margin: 50px 0px 50px 10%;
+}
+.nav ul ,.settings ul{
+    display: grid;
+    gap :30px;
+    list-style: none;
+    
+}
+.nav{
+    align-self: flex-start;
+    margin-left: 15%;
+
+}
+.settings ul{
+    margin-top: 80px;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: larger;
+}
+.fa-solid, .fa-brands{
+    transition: transform 0.3s ease-in-out;
+    margin-right: 20px;
+    color: var(--white);
+    font-size: larger;
+}
+.fa-solid:hover{
+    transform: scale(1.3);
+}
+/* CONTENT */
+.projects-heading , .announcements-heading , .trending-heading{
+    font-size: 18px;
 }
 .content{
+    height: 75vh;
+    padding-left: 25px;
+    padding-right: 25px;
     display: grid;
-    background-color: brown;
     gap: 20px;
     grid-template: repeat(2 , 1fr) / 3fr 1fr;
 }
 .projects{
+
     display: grid;
+    
     grid-template-rows: 30px 2fr;
     grid-row: 1 / 3 ;
 
 }
 .projects-heading{
-    background-color: aliceblue;
     grid-row: 1/ 2;
 }
 .project-cards{
     display: grid;
-    background-color: blue;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
     grid-row: 2 /3 ;
+
 }
 
 .announcements{
     display: grid;
     grid-template-rows: 30px 2fr;
-    gap: 10px;
-    background-color: blueviolet;
+    width: max(200px,20vw);
     /* grid-area: 1 / 2 / 2 / 3; */
 }
 .trending{
+    width: max(300px,1fr);
     display: grid;
     grid-template-rows: 30px 2fr;
-    background-color: rgb(0, 238, 238);
     grid-area: 2/2/3/3;
 
 }
-.card{
-    background-color: rgb(231, 221, 221);
-    height: auto;
+.project-card{
+    display:grid ;
+    grid-template-rows: 1fr 40px;
+    border-radius: 10px;
+    background-color: var(--secondery-dark);
+    padding: 30px 10px 10px 20px;
+    border-left: 8px solid  var(--cyan);
 }
-.announcements-heading{
-    background-color: aqua;
-    grid-row: 1/2;
+.card-title h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.card-title p{
+    margin-top: 5px;
+    font-size: 16px;
+    color: var(--paragraph-color);
+}
+.project-card .fa-solid, .project-card .fa-brands{
+    font-size: 20px;
+}
+.actions{
+    align-self: end;
+    justify-self: end;
 }
 .announcement-cards{
     display: grid;
     grid-row: 2/3;
+    padding: 0px 20px;
+    border-radius: 10px;
+    background-color: var(--secondery-dark);
 
 }
 .announcement-item{
-    background-color:bisque;
+    background-color: var(--secondery-dark);
+    border-top: 1px solid var(--primary-dark);
+    align-items: center;
+    justify-items: start;
+    padding: 20px 5px;
 
+}
+.announcement-item h3{
+    font-weight: 600;
+    font-size: 14px;
+}
+.announcement-item p{
+    margin-top: 3px;
+    color: var(--paragraph-color);
+    font-size: 14px;
+}
+.announcement-item:nth-child(1){
+    border: none;
+}
+.trending-item{
+    display: grid;
+    grid-template:auto auto / auto auto;
+    background-color: var(--secondery-dark);
+    padding:20px 5px;
 }
 .trending-cards{
+
+    padding: 0px 20px;
+    background-color: var(--secondery-dark);
     display: grid;
+    grid-template-rows: repeat(3,1fr);
+    border-radius: 10px;
+
+}
+.trending-item .avatar{
+    width: 50px;
+    margin-right: 5px;
+}
+.trend-info p{
+    color: var(--paragraph-color);
+    margin-top: 4px;
+    font-size:12px ;
+}
+.announcements ,.project-cards, .announcement-cards , .trending , .trending-cards {
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 
@@ -79,4 +295,3 @@
 
 
 
-/* end layout */
