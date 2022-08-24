@@ -22,6 +22,7 @@ body{
     grid-template-rows:repeat(2,1fr);
     grid-area: 1 / 2 / 2 / 3;
     height: max(140px,15vh);
+    width:auto;
     padding: 0px 4%;
     background-color: var(--secondery-dark);
 }
@@ -289,6 +290,40 @@ a{
     scrollbar-width: none;
 }
 
+
+
+
+
+
+@media only screen and (max-width:1000px){
+  body{
+    grid-template-columns: 80px 4fr ;
+  }
+  .dashboard{
+    width:auto;
+  }
+  .dashboard .nav a,.dashboard-header{
+    visibility:hidden;
+  }
+  .dashboard-header{
+    margin-bottom:0px;
+  }
+  .nav-item .fa-solid, .dashboard-header .fa-solid{
+    visibility:visible;
+    margin-left:15px;
+  }
+  .dashboard-header .fa-solid{
+    
+  }
+  .settings ul{
+    margin-top:2vh;
+    gap:2vhpx;
+  }
+  .nav ul{
+    gap:2vhpx;
+  }
+
+}
 
 
 
